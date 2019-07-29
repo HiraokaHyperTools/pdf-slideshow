@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>PDF slide-show test</title>
+</head>
+
+<body>
+    <h1>PDF slide-show test</h1>
+
+    <p>
+        PDF selector:
+        <select id="selector" onchange="selected()">
+            <option value="fig (1).pdf" selected="1">fig (1).pdf</option>
+            <option value="fig (2).pdf">fig (2).pdf</option>
+            <option value="fig (3).pdf">fig (3).pdf</option>
+            <option value="fig (4).pdf">fig (4).pdf</option>
+            <option value="fig (5).pdf">fig (5).pdf</option>
+            <option value="fig (6).pdf">fig (6).pdf</option>
+            <option value="fig (7).pdf">fig (7).pdf</option>
+            <option value="fig (8).pdf">fig (8).pdf</option>
+            <option value="fig (9).pdf">fig (9).pdf</option>
+            <option value="fig (10).pdf">fig (10).pdf</option>
+        </select>
+    </p>
+    <p>PDF preview:</p>
+    <iframe width="500" height="300" id="iframe">
+
+    </iframe>
+
+    <p>
+        <a href="src.zip">src.zip</a>
+    </p>
+
+    <script type="text/javascript">
+        var iframe = document.getElementById("iframe");
+        var selector = document.getElementById("selector");
+        function selected() {
+            iframe.src = encodeURIComponent(selector.value);
+        }
+        // first preview
+        selected();
+    </script>
+</body>
+
+</html>
